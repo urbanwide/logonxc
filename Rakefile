@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "logonxc"
   gem.homepage = "http://github.com/urbanwide/logonxc"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Logo to Lego NXC}
+  gem.description = %Q{Parse basic logo and output NXC for Lego Mindstorms}
   gem.email = "deb@urbanwide.com"
   gem.authors = ["Deb Bassett"]
   # dependencies defined in Gemfile

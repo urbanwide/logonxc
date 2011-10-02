@@ -1,6 +1,6 @@
 = logonxc
 
-Description goes here.
+Parse basic logo commands and output NXC (a simple c-like programming language for Lego Mindstorms)
 
 == Contributing to logonxc
  
