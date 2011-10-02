@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/logonxc.rb",
+    "logonxc.gemspec",
     "spec/logonxc_spec.rb",
     "spec/spec_helper.rb",
     "templates/logonxc.erb"
