@@ -14,6 +14,8 @@ describe "LogoNxc" do
       fd 200
       back 10
       bk 200
+      print "thing"
+      print 'other thing'
     TEXT
   end
 
@@ -52,6 +54,13 @@ describe "LogoNxc" do
     it "should translate bk" do
       @output[9].should == "back(200);"
     end
+    it "should translate print with double quotes" do
+      @output[10].should == 'print("thing");'
+    end
+    it "should translate print with single quotes" do
+      @output[11].should == 'print("other thing");'
+    end
+
   end
 
   describe ".nxc" do

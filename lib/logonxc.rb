@@ -13,6 +13,8 @@ class LogoNxc
     output = ""
     text.each_line do |line|
       case
+      when line =~ /print\s+["']([^"']+)["']/
+        output << "print(\"#{$1}\");\n"
       when line =~ /repeat\s+(\d+)\s+\[/
         output << "repeat(#{$1}) {\n"
       when line =~ /(?:right|rt)\s*(\d+)/
