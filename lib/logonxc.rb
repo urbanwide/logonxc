@@ -15,6 +15,10 @@ class LogoNxc
       case
       when line =~ /print\s+["']([^"']+)["']/
         output << "print(\"#{$1}\");\n"
+      when line =~ /sleep\s+(\d+)/
+        output << "wait(#{$1});\n"
+      when line =~ /beep/
+        output << "beep();\n"
       when line =~ /repeat\s+(\d+)\s+\[/
         output << "repeat(#{$1}) {\n"
       when line =~ /(?:right|rt)\s*(\d+)/

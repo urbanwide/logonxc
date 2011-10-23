@@ -16,6 +16,8 @@ describe "LogoNxc" do
       bk 200
       print "thing"
       print 'other thing'
+      sleep 1000
+      beep
     TEXT
   end
 
@@ -60,7 +62,12 @@ describe "LogoNxc" do
     it "should translate print with single quotes" do
       @output[11].should == 'print("other thing");'
     end
-
+    it "should translate sleep" do
+      @output[12].should == 'wait(1000);'
+    end
+    it "should translate beep" do
+      @output[13].should == 'beep();'
+    end
   end
 
   describe ".nxc" do
