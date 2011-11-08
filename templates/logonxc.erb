@@ -67,8 +67,22 @@ sub back(int paces) {
   move_end();
 }
 
+task maze() {
+  <%= nxc_block %>
+  wait(2000);
+}
+
+task red() {
+  SetSensorColorFull(IN_1); // initialize the color sensor
+  while(true) {
+    if(Sensor(IN_1) == INPUT_REDCOLOR) {
+      PlayToneEx (400, 100, 4, false);
+    }
+  }
+}
+
 task main() {
 
-  <%= nxc_block %>
+  Precedes(red, maze);
 
 }
