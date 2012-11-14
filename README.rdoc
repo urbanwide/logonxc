@@ -1,6 +1,7 @@
 = logonxc
 
 Parse basic logo commands and output NXC (a simple c-like programming language for Lego Mindstorms)
+WARNING: I doubt that this will be useful to anyone else as it is. The main drive motors are hardcoded to B&C, the pen to A. Also the pace and turn sizes will likely be different on other logo bots.
 
 == Contributing to logonxc
  
