@@ -18,6 +18,8 @@ describe "LogoNxc" do
       print 'other thing'
       sleep 1000
       beep
+      penup
+      pendown
     TEXT
   end
 
@@ -67,6 +69,12 @@ describe "LogoNxc" do
     end
     it "should translate beep" do
       @output[13].should == 'beep();'
+    end
+    it "should translate penup" do
+      @output[14].should == 'penup();'
+    end
+    it "should translate pendown" do
+      @output[15].should == 'pendown();'
     end
   end
 

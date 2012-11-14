@@ -29,6 +29,10 @@ class LogoNxc
         output << "forward(#{$1});\n"
       when line =~ /(?:back|bk)\s*(\d+)/
         output << "back(#{$1});\n"
+      when line =~ /penup/
+        output << "penup();\n"
+      when line =~ /pendown/
+        output << "pendown();\n"
       when line =~ /\]/
         output << "}\n"
       end

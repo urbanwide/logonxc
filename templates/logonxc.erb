@@ -67,15 +67,16 @@ sub back(int paces) {
   move_end();
 }
 
+sub penup() {
+  RotateMotor(OUT_A, POWER, -18);
+  move_end();
+}
+
 sub pendown() {
   RotateMotor(OUT_A, POWER, 18);
   move_end();
 }
 
-sub penup() {
-  RotateMotor(OUT_A, POWER, -18);
-  move_end();
-}
 
 task code() {
   pendown();
