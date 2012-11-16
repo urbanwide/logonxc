@@ -79,6 +79,7 @@ sub pendown() {
 
 
 task code() {
+  penup();
   pendown();
   <%= nxc_block %>
   wait(2000);
